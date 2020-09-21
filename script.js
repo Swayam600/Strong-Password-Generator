@@ -23,8 +23,14 @@ function copy() {
 
     // storing the password element in a variable
     var password = document.getElementById('password');
+    
+    // selection of the password
     password.select();
+    
+    //setting the range of selection
     password.setSelectionRange(0, 9999);
+    
+    // Finally, copy the selected file.
     document.execCommand('copy')
 
 
