@@ -3,12 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --primary: #858AE3;
+    --secondary: #613DC1;
+
+    --font: #97DFFC;
+    color: var(--font)
+}
 body {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(90deg, var(--primary), var(--font))
 }
 ::selection {
     background: none;
@@ -17,53 +25,66 @@ body {
     display: flex;
     flex-direction: column;
     float: left;
-    padding: 10px 40px;
-    background: whitesmoke;
-    border: 1px solid lightgrey;
+    padding: 40px;
+    background: var(--secondary);
+    border: 1px solid var(--primary);
     border-radius: 20px;
-    box-shadow: inset 3px 3px 5px lightgrey,
-    3px 3px 5px lightgrey;
+    width: 530px;
 }
 .container h3 {
     font-size: 35px;
     font-family: monospace;
-    color: rebeccapurple;
+    color: var(--font);
 }
 .container #password {
     padding-left: 20px;
     font-size: 20px;
     height: 50px;
     margin-top: 20px;
-    width: 90%;
+    width: 290px;
     font-family: monospace;
     outline: none;
     border: none;
     border-radius: 10px;
-    box-shadow: inset 3px 3px 5px lightgrey, 3px 3px 5px lightgrey;
-    color: #cc0000;
+    color: var(--font);
+    background: var(--primary)
+}
+.container #password::placeholder {
+    color: var(--font)
 }
 .container button {
     margin-top: 20px;
     outline: none;
     border: none;
     border-radius: 5px;
-    background: black;
-    color: white;
+    background: var(--primary);
+    color: var(--font);
     height: 40px;
     width: 35%;
     font-size: 20px;
     cursor: pointer;
+    transition: 0.5s
 }
 .container button:hover {
-    background-color: rebeccapurple;
+    background-color: var(--font);
+    color: var(--primary)
 }
-.fa-clipboard {
+.fa {
     font-size: 20px;
-    color: grey;
-    margin-left: -30px;
+    color: var(--font);
     cursor: pointer;
     transition: .3s;
+    background: var(--primary);
+    height: 50px;
+    padding: 15px 15px;
+    width: 50px;
+    border-radius: 10px;
+    margin: 7px
 }
-.fa-clipboard:hover {
-    color: black;
+.fa-clipboard {
+    /* right: 50px; */
+    background: var(--font);
+    color: var(--primary);
+    position: relative;
+    display: inline-block
 }
